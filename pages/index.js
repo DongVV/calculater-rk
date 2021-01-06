@@ -72,7 +72,7 @@ const Home = () => {
 
     FIELDS.map(field => {
       totalRevenue += eval(data[`cal_M_${field.name}`]);
-      totalOrigin += ((parseInt(data[field.name]) + data['shipping_fee']) * parseInt(data[`number_M_${field.name}`]));
+      totalOrigin += ((parseInt(data[field.name]) + parseInt(data['shipping_fee'])) * parseInt(data[`number_M_${field.name}`]));
     });
     let totalProfitTmp = totalRevenue - totalOrigin;
 
